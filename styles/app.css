@@ -1,17 +1,46 @@
 .main {
     display: flex;
+    gap: 20px;
 }
 
 .aside {
     flex-grow: 0.3;
+    min-width: 220px;
 }
 
 .content {
     flex-grow: 0.7;
+    min-width: 0;
 }
-#listContainer{
+
+#listContainer {
     height: 300px;
-    overflow: hidden;
-    overflow-y: scroll;
-    border: black 1px solid;
+    overflow-y: auto;
+    border: 1px solid black;
+}
+
+#listContainer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#listContainer li {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+#listContainer li:hover {
+    background-color: #eee;
+}
+
+.launchpad-dot {
+    transition: r 0.15s ease, fill 0.15s ease;
+}
+
+.launchpad-dot.active {
+    fill: #e74c3c;
+    stroke: #922b21;
+    stroke-width: 2px;
 }
